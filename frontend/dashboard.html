@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelMind AI — Incident Dashboard</title>
+    <meta name="description" content="Real-time cybersecurity incident risk metrics and status overview.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Ambient colour blob -->
+    <div class="ambient-blob"></div>
+
+    <div class="container">
+
+        <h1>Dashboard</h1>
+        <p class="subtitle">Risk Metrics &amp; System Status</p>
+
+        <div class="card">
+
+            <h2>⊹ Incident Metrics</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card total">
+                    <div class="stat-icon">◈</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Total</span>
+                        <span class="stat-value" id="stat-total">0</span>
+                    </div>
+                </div>
+
+                <div class="stat-card critical">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Critical</span>
+                        <span class="stat-value" id="stat-critical">0</span>
+                    </div>
+                </div>
+
+                <div class="stat-card high">
+                    <div class="stat-icon">▲</div>
+                    <div class="stat-info">
+                        <span class="stat-label">High Risk</span>
+                        <span class="stat-value" id="stat-high">0</span>
+                    </div>
+                </div>
+
+                <div class="stat-card medium">
+                    <div class="stat-icon">◆</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Medium</span>
+                        <span class="stat-value" id="stat-medium">0</span>
+                    </div>
+                </div>
+
+                <div class="stat-card low">
+                    <div class="stat-icon">●</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Low Risk</span>
+                        <span class="stat-value" id="stat-low">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+
+            <h2>⊹ Memory Search</h2>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem;">
+                Query organizational memory to retrieve similar past incidents and recommendations.
+            </p>
+
+            <div class="search-bar" style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <input type="text" id="search-query" placeholder="Search past incidents (e.g. phishing, login, MFA)..." style="margin: 0;" onkeydown="if(event.key === 'Enter') searchMemory()">
+                <button id="search-btn" onclick="searchMemory()" style="width: auto; margin-top: 0; padding: 0.75rem 1.5rem; flex-shrink: 0;">
+                    Search ⌕
+                </button>
+            </div>
+
+            <div id="search-results" class="search-results-container">
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 1rem 0;">
+                    Enter keywords above to query SentinelMind memory.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>⊹ Recent Incidents</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 8%">ID</th>
+                            <th>Title</th>
+                            <th>Affected System</th>
+                            <th>Category</th>
+                            <th style="width: 15%">Severity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incidents-tbody">
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: var(--text-muted);">
+                                Loading security incidents...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="nav-container">
+            <a href="index.html" class="nav-link nav-link-back" id="back-link">&larr; Submit Incident</a>
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

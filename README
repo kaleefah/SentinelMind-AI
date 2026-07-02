@@ -1,0 +1,236 @@
+# 🛡️ SentinelMind AI
+
+> AI-powered Cybersecurity Incident Analysis & Memory Assistant built with FastAPI, HTML/CSS/JavaScript, SQLite, and Cognee.
+
+---
+
+## 📌 Overview
+
+SentinelMind AI is an intelligent cybersecurity incident management system that analyzes security incidents, classifies them using AI, stores them in a database, and remembers previous incidents using **Cognee Memory**.
+
+Unlike traditional incident management tools that simply store records, SentinelMind AI allows analysts to retrieve similar historical incidents and reuse previous knowledge when responding to new threats.
+
+---
+
+## ✨ Features
+
+- 🔍 AI-powered incident analysis
+- 🧠 Persistent memory using Cognee
+- 📚 Search similar cybersecurity incidents
+- 💾 SQLite incident database
+- 📊 Dashboard showing incident statistics
+- 🎯 Automatic severity classification
+- 🛡 Security recommendations for every incident
+- 🌐 FastAPI REST API
+- 💻 Responsive HTML/CSS frontend
+
+---
+
+## 🏗 System Architecture
+
+Frontend (HTML/CSS/JavaScript)
+
+↓
+
+FastAPI Backend
+
+↓
+
+AI Analysis Engine
+
+↓
+
+SQLite Database
+
+↓
+
+Cognee Memory Layer
+
+↓
+
+Historical Incident Retrieval
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite
+
+### AI & Memory
+
+- Cognee
+- Custom AI Incident Classification Engine
+
+---
+
+## 📂 Project Structure
+
+```
+SentinelMind-AI/
+│
+├── backend/
+│   ├── main.py
+│   ├── ai_engine.py
+│   ├── cognee_memory.py
+│   ├── database.py
+│   ├── models.py
+│   └── sentinel.db
+│
+├── frontend/
+│   ├── index.html
+│   ├── dashboard.html
+│   ├── script.js
+│   └── styles.css
+│
+└── README.md
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/SentinelMind-AI.git
+```
+
+Move into the project
+
+```bash
+cd SentinelMind-AI
+```
+
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate the environment
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the backend
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Open the frontend
+
+```
+frontend/index.html
+```
+
+---
+
+## Example Incident
+
+**Title**
+
+```
+Fake Microsoft Login Email
+```
+
+**Description**
+
+```
+Employee received a phishing email requesting Microsoft 365 credentials.
+```
+
+**System**
+
+```
+Corporate Email
+```
+
+Output
+
+```
+Category:
+Social Engineering
+
+Severity:
+Medium
+
+Recommendation:
+Block sender, reset credentials, enable MFA.
+```
+
+---
+
+## Future Improvements
+
+- Real LLM-based threat analysis
+- SIEM integration
+- IOC extraction
+- PDF incident reports
+- Authentication
+- Multi-user support
+- Threat intelligence integration
+
+---
+
+## Why Cognee?
+
+Cognee provides long-term semantic memory for AI applications.
+
+In SentinelMind AI, Cognee enables:
+
+- Persistent cybersecurity memory
+- Retrieval of similar incidents
+- Knowledge reuse
+- Better incident response
+
+---
+
+## 👨‍💻 Authors
+
+Muhammad Mustapha
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 🤖 AI Assistance Disclosure
+
+This project was developed by the author with assistance from AI tools.
+
+AI assistance was used for:
+
+- brainstorming ideas
+- debugging
+- code explanations
+- architecture discussions
+- improving documentation
+
+The project design, implementation decisions, integration, testing, and final submission were completed by the author.
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

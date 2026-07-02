@@ -1,0 +1,15 @@
+venv/
+
+__pycache__/
+
+*.pyc
+
+.env
+
+sentinel.db
+
+.cognee/
+
+.idea/
+
+.vscode/

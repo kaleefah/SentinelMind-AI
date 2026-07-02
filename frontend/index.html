@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelMind AI — Incident Analysis</title>
+    <meta name="description" content="AI-powered cybersecurity incident memory assistant. Submit and analyze security incidents instantly.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-btn:hover {
+            background: #e5e5e5 !important;
+            color: #000000 !important;
+            box-shadow: 0 6px 35px rgba(255, 255, 255, 0.3) !important;
+            transform: translateY(-2px) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient colour blob -->
+    <div class="ambient-blob"></div>
+
+    <div class="container">
+
+        <!-- Hero Landing Section -->
+        <div class="hero" style="text-align: center; padding: 4rem 1rem 3.5rem; margin-bottom: 2rem; animation: fadeUp 0.6s ease-out both;">
+            <div class="hero-badge" style="display: inline-block; padding: 0.35rem 0.85rem; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                🛡 SentinelMind AI
+            </div>
+            <h1 style="font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; letter-spacing: -0.03em; display: block; text-align: center;">
+                Remember Every Threat.<br>
+                <span style="background: linear-gradient(135deg, #ffffff 40%, #a3a3a3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Respond Smarter.</span>
+            </h1>
+            <p style="font-size: 1rem; color: var(--text-secondary); max-width: 480px; margin: 0 auto 2rem; line-height: 1.65; text-align: center;">
+                Analyze cybersecurity incidents with AI and retrieve similar historical attacks using Cognee Memory.
+            </p>
+            <button onclick="scrollToSubmit()" class="hero-btn" style="width: auto; display: inline-flex; margin: 1.5rem auto 0; padding: 0.85rem 2.2rem; font-size: 0.9rem; border-radius: 30px; background: #ffffff; color: #000000; border: none; font-weight: 700; cursor: pointer; transition: var(--transition); text-transform: none; letter-spacing: normal; box-shadow: 0 4px 30px rgba(255,255,255,0.20);">
+                Analyze Incident ↓
+            </button>
+        </div>
+
+        <div class="card" id="submit-section">
+
+            <h2>⊹ Submit Incident</h2>
+
+            <div class="form-group">
+                <label for="title">Incident Title</label>
+                <input type="text" id="title" placeholder="e.g. Suspicious login from external IP">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Describe the security event, indicators of compromise, affected scope…"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="system">Affected System</label>
+                <input type="text" id="system" placeholder="e.g. LDAP Server, Corporate Mailbox">
+            </div>
+
+            <button id="analyze-btn" onclick="submitIncident()">
+                Analyze Incident →
+            </button>
+
+            <div id="result"></div>
+
+            <div id="memory-result"></div>
+
+        </div>
+
+        <div class="nav-container">
+            <a href="dashboard.html" class="nav-link" id="dashboard-link">Dashboard &rarr;</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
